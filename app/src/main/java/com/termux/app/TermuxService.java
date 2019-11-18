@@ -54,6 +54,7 @@ public final class TermuxService extends Service implements SessionChangedCallba
 
     private static final int NOTIFICATION_ID = 1337;
 
+    private static final String WAKE_LOCK_TAG = "termux:TermuxService";
     private static final String ACTION_STOP_SERVICE = "com.termux.service_stop";
     private static final String ACTION_LOCK_WAKE = "com.termux.service_wake_lock";
     private static final String ACTION_UNLOCK_WAKE = "com.termux.service_wake_unlock";
@@ -106,7 +107,7 @@ public final class TermuxService extends Service implements SessionChangedCallba
         } else if (ACTION_LOCK_WAKE.equals(action)) {
             if (mWakeLock == null) {
                 PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-                mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, EmulatorDebug.LOG_TAG);
+                mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, WAKE_LOCK_TAG);
                 mWakeLock.acquire();
 
                 // http://tools.android.com/tech-docs/lint-in-studio-2-3#TOC-WifiManager-Leak
