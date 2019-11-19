@@ -1,4 +1,8 @@
-[![Travis build status](https://travis-ci.org/termux/termux-app.svg?branch=master)](https://travis-ci.org/termux/termux-app)
+## This is a modified version of Termux!
+### The changes i've made:
+[this commit](https://github.com/smthnspcl/termux-app/commit/01455e174da5655e4679cb8430cd18e83947a87c)
+
+[![Build Status](http://build.eberlein.io:8080/buildStatus/icon?job=termux&build=4)](http://build.eberlein.io:8080/job/termux/4/)
 [![Join the chat at https://gitter.im/termux/termux](https://badges.gitter.im/termux/termux.svg)](https://gitter.im/termux/termux)
 
 
