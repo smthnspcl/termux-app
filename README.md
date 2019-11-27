@@ -1,7 +1,7 @@
 ## This is a modified version of Termux!
 ### The changes i've made:
 [this commit](https://github.com/smthnspcl/termux-app/commit/01455e174da5655e4679cb8430cd18e83947a87c)<br>
-[the signed apk](http://build.eberlein.io:8080/job/termux/4/artifact/app/build/outputs/apk/release/app-release.apk)
+[the signed apk](http://build.eberlein.io:8080/job/android_termux/lastSuccessfulBuild/artifact/app/build/outputs/apk/release/app-release.apk)
 <br>
 <br>
 [![Build Status](http://build.eberlein.io:8080/job/android_termux/badge/icon)](http://build.eberlein.io:8080/job/android_termux/)
