@@ -4,7 +4,7 @@
 [the signed apk](http://build.eberlein.io:8080/job/termux/4/artifact/app/build/outputs/apk/release/app-release.apk)
 <br>
 <br>
-[![Build Status](http://build.eberlein.io:8080/buildStatus/icon?job=termux&build=4)](http://build.eberlein.io:8080/job/termux/4/)
+[![Build Status](http://build.eberlein.io:8080/job/android_termux/badge/icon)](http://build.eberlein.io:8080/job/android_termux/)
 [![Join the chat at https://gitter.im/termux/termux](https://badges.gitter.im/termux/termux.svg)](https://gitter.im/termux/termux)
 
 
