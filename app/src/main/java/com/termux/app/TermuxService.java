@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Binder;
 import android.os.Build;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.PowerManager;
@@ -48,7 +49,7 @@ public final class TermuxService extends Service implements SessionChangedCallba
 
     /** Note that this is a symlink on the Android M preview. */
     @SuppressLint("SdCardPath")
-    public static final String FILES_PATH = "/data/data/com.termux/files";
+    public static final String FILES_PATH = Environment.getExternalStorageDirectory().getAbsolutePath() + "/termux/files";
     public static final String PREFIX_PATH = FILES_PATH + "/usr";
     public static final String HOME_PATH = FILES_PATH + "/home";
 
@@ -68,7 +69,7 @@ public final class TermuxService extends Service implements SessionChangedCallba
 
     /** This service is only bound from inside the same process and never uses IPC. */
     class LocalBinder extends Binder {
-        public final TermuxService service = TermuxService.this;
+        final TermuxService service = TermuxService.this;
     }
 
     private final IBinder mBinder = new LocalBinder();
@@ -95,7 +96,7 @@ public final class TermuxService extends Service implements SessionChangedCallba
     /** If the user has executed the {@link #ACTION_STOP_SERVICE} intent. */
     boolean mWantsToStop = false;
 
-    @SuppressLint("Wakelock")
+    @SuppressLint("WakelockTimeout")
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         String action = intent.getAction();
